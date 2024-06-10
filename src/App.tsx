@@ -1,12 +1,10 @@
-import { Filter, Search, ShoppingCart, Sun } from 'lucide-react'
+import { Filter, Search, ShoppingCart } from 'lucide-react'
+import { Header } from './components/Header'
 
 export function App() {
 	return (
-		<main>
-			<header>
-				<ShoppingCart size={24} />
-				<Sun size={24} />
-			</header>
+		<main className='p-4'>
+			<Header />
 
 			<div>
 				<label htmlFor='productName'>
@@ -26,7 +24,10 @@ export function App() {
 
 			<div>
 				<div>
-					<img src='' alt='' />
+					<img
+						src='https://www.myimaginestore.com/media/mf_webp/jpeg/media/catalog/product/cache/4a48ac28cbb6e9c41470e5be5a6d3043/a/i/air-gold_2.webp'
+						alt='Macbook'
+					/>
 				</div>
 
 				<h3>Macbook Air M1 Chip M1</h3>
