@@ -3,12 +3,17 @@ import { ShoppingCart } from 'lucide-react'
 export function Product() {
 	return (
 		<div className='flex flex-col gap-4 bg-zinc-200 p-2 rounded-lg'>
-			<div className='w-full h-[200px] '>
+			<div className='w-full h-[200px] relative group'>
 				<img
 					src='https://www.myimaginestore.com/media/mf_webp/jpeg/media/catalog/product/cache/4a48ac28cbb6e9c41470e5be5a6d3043/a/i/air-gold_2.webp'
 					alt='Macbook'
 					className='rounded-lg w-full h-full aspect-square object-cover'
 				/>
+				<div className='bg-black/50 absolute inset-0 rounded-lg hidden group-hover:flex items-center justify-center'>
+          <a href='#!' className='text-zinc-200 border border-zinc-200 rounded-lg px-3 py-2 hover:bg-zinc-200 hover:text-zinc-900 transition'>
+            Visualizar Produto
+          </a>
+        </div>
 			</div>
 
 			<div className='flex flex-col gap-6 items-center'>
