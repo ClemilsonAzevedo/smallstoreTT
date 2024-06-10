@@ -1,5 +1,6 @@
-import { Filter, Search, ShoppingCart } from 'lucide-react'
+import { Filter, ShoppingCart } from 'lucide-react'
 import { Header } from './components/Header'
+import { SearchInput } from './components/SearchInput'
 
 export function App() {
 	return (
@@ -7,19 +8,15 @@ export function App() {
 			<Header />
 
 			<div>
-				<label htmlFor='productName'>
-					<Search size={20} />
-				</label>
-				<input type='text' name='productName' id='productName' />
-			</div>
-
-			<div>
-				<Filter />
-				<select name='' id=''>
-					<option defaultValue={'default'} value='default'>
-						Filtre por preço
-					</option>
-				</select>
+				<SearchInput />
+				<div>
+					<Filter />
+					<select name='' id=''>
+						<option defaultValue={'default'} value='default'>
+							Filtre por preço
+						</option>
+					</select>
+				</div>
 			</div>
 
 			<div>

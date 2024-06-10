@@ -10,6 +10,6 @@ export function Header() {
 				</span>
 			</div>
 			<Sun size={24} />
-		</header>
+		</header> 
 	)
 }
