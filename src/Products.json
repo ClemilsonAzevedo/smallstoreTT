@@ -1,0 +1,102 @@
+{
+	"products": [
+		{
+			"id": 1,
+			"name": "Amazon Echo Dot",
+			"category": "Smart Home",
+			"price": "R$ 49,99",
+			"imageUrl": "assets/amazon_echo_dot.jpg"
+		},
+		{
+			"id": 2,
+			"name": "Mouse Pad",
+			"category": "Accessories",
+			"price": "R$ 29,99",
+			"imageUrl": "assets/mouse_pad.jpg"
+		},
+		{
+			"id": 3,
+			"name": "Cabo USB-C",
+			"category": "Accessories",
+			"price": "R$ 19,99",
+			"imageUrl": "assets/cabo_usb_c.jpg"
+		},
+		{
+			"id": 4,
+			"name": "Película Protetora para iPhone",
+			"category": "Accessories",
+			"price": "R$ 39,99",
+			"imageUrl": "assets/pelicula_protetora_iphone.jpg"
+		},
+		{
+			"id": 5,
+			"name": "Carregador de Parede USB",
+			"category": "Accessories",
+			"price": "R$ 24,99",
+			"imageUrl": "assets/carregador_parede_usb.jpg"
+		},
+		{
+			"id": 6,
+			"name": "MacBook Pro",
+			"category": "Laptops",
+			"price": "R$ 9.999,99",
+			"imageUrl": "assets/macbook_pro.jpg"
+		},
+		{
+			"id": 7,
+			"name": "iPhone 13",
+			"category": "Smartphones",
+			"price": "R$ 5.999,99",
+			"imageUrl": "assets/iphone_13.jpg"
+		},
+		{
+			"id": 8,
+			"name": "iPad Pro",
+			"category": "Tablets",
+			"price": "R$ 4.799,99",
+			"imageUrl": "assets/ipad_pro.jpg"
+		},
+		{
+			"id": 9,
+			"name": "Apple Watch Series 7",
+			"category": "Wearables",
+			"price": "R$ 2.399,99",
+			"imageUrl": "assets/apple_watch_series_7.jpg"
+		},
+		{
+			"id": 10,
+			"name": "AirPods Pro",
+			"category": "Accessories",
+			"price": "R$ 1.249,99",
+			"imageUrl": "assets/airpods_pro.jpg"
+		},
+		{
+			"id": 11,
+			"name": "Samsung Galaxy S21",
+			"category": "Smartphones",
+			"price": "R$ 3.999,99",
+			"imageUrl": "assets/samsung_galaxy_s21.jpg"
+		},
+		{
+			"id": 12,
+			"name": "Dell XPS 13",
+			"category": "Laptops",
+			"price": "R$ 5.499,99",
+			"imageUrl": "assets/dell_xps_13.jpg"
+		},
+		{
+			"id": 13,
+			"name": "Sony WH-1000XM4",
+			"category": "Accessories",
+			"price": "R$ 1.749,99",
+			"imageUrl": "assets/sony_wh_1000xm4.jpg"
+		},
+		{
+			"id": 14,
+			"name": "Google Pixel 6",
+			"category": "Smartphones",
+			"price": "R$ 2.999,99",
+			"imageUrl": "assets/google_pixel_6.jpg"
+		}
+	]
+}
