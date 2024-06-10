@@ -1,3 +1,9 @@
+import { BackButton } from "../components/BackButton";
+
 export function ProductDetail() {
-	return <h1>ProductDetail</h1>
+	return(
+		<section>
+			<BackButton />
+		</section>
+	)
 }
