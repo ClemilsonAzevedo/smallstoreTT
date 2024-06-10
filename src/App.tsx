@@ -1,13 +1,14 @@
-import { Filter, ShoppingCart } from 'lucide-react'
+import { Filter } from 'lucide-react'
 import { Header } from './components/Header'
+import { Product } from './components/Product'
 import { SearchInput } from './components/SearchInput'
 
 export function App() {
 	return (
-		<main className='p-4'>
+		<main className='p-4 mb-5 flex flex-col gap-4'>
 			<Header />
 
-			<div>
+			<div className='space-y-2'>
 				<SearchInput />
 				<div className='border border-zinc-400 px-2 py-3 rounded-lg flex items-center max-w-max text-zinc-700'>
 					<Filter size={20} className='text-zinc-400' />
@@ -22,27 +23,13 @@ export function App() {
 				</div>
 			</div>
 
-			<div>
-				<div>
-					<img
-						src='https://www.myimaginestore.com/media/mf_webp/jpeg/media/catalog/product/cache/4a48ac28cbb6e9c41470e5be5a6d3043/a/i/air-gold_2.webp'
-						alt='Macbook'
-					/>
-				</div>
-
-				<h3>Macbook Air M1 Chip M1</h3>
-
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis tenetur
-					culpa possimus assumenda architecto praesentium rem cum.
-				</p>
-
-				<div>
-					<span>2,000.90 R$</span>
-					<button type='button'>
-						<ShoppingCart />
-					</button>
-				</div>
+			<div className='space-y-2'>
+				<Product />
+				<Product />
+				<Product />
+				<Product />
+				<Product />
+				<Product />
 			</div>
 		</main>
 	)
