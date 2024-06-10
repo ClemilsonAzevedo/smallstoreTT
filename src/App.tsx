@@ -9,12 +9,15 @@ export function App() {
 
 			<div>
 				<SearchInput />
-				<div>
-					<Filter />
-					<select name='' id=''>
+				<div className='border border-zinc-400 px-2 py-3 rounded-lg flex items-center max-w-max text-zinc-700'>
+					<Filter size={20} className='text-zinc-400' />
+					<select name='' id='' className='focus:outline-none text-center'>
 						<option defaultValue={'default'} value='default'>
 							Filtre por preço
 						</option>
+						<option value='default'>R$ 0 - R$ 50</option>
+						<option value='default'>R$ 51 - R$ 500</option>
+						<option value='default'>R$ 501 - R$ +2.000</option>
 					</select>
 				</div>
 			</div>
