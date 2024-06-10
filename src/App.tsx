@@ -1,36 +1,10 @@
-import { Filter } from 'lucide-react'
-import { Header } from './components/Header'
-import { Product } from './components/Product'
-import { SearchInput } from './components/SearchInput'
+import { BrowserRouter } from 'react-router-dom'
+import { Routes } from './routes'
 
 export function App() {
 	return (
-		<main className='p-4 mb-5 flex flex-col gap-4'>
-			<Header />
-
-			<div className='space-y-2'>
-				<SearchInput />
-				<div className='border border-zinc-400 px-2 py-3 rounded-lg flex items-center max-w-max text-zinc-700'>
-					<Filter size={20} className='text-zinc-400' />
-					<select name='' id='' className='focus:outline-none text-center'>
-						<option defaultValue={'default'} value='default'>
-							Filtre por preço
-						</option>
-						<option value='default'>R$ 0 - R$ 50</option>
-						<option value='default'>R$ 51 - R$ 500</option>
-						<option value='default'>R$ 501 - R$ +2.000</option>
-					</select>
-				</div>
-			</div>
-
-			<div className='space-y-2'>
-				<Product />
-				<Product />
-				<Product />
-				<Product />
-				<Product />
-				<Product />
-			</div>
-		</main>
+		<BrowserRouter>
+			<Routes />
+		</BrowserRouter>
 	)
 }

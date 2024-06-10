@@ -10,10 +10,12 @@ export function Product() {
 					className='rounded-lg w-full h-full aspect-square object-cover'
 				/>
 				<div className='bg-black/50 absolute inset-0 rounded-lg hidden group-hover:flex items-center justify-center'>
-          <a href='#!' className='text-zinc-200 border border-zinc-200 rounded-lg px-3 py-2 hover:bg-zinc-200 hover:text-zinc-900 transition'>
-            Visualizar Produto
-          </a>
-        </div>
+					<a
+						href='/product/:productId/detail'
+						className='text-zinc-200 border border-zinc-200 rounded-lg px-3 py-2 hover:bg-zinc-200 hover:text-zinc-900 transition'>
+						Visualizar Produto
+					</a>
+				</div>
 			</div>
 
 			<div className='flex flex-col gap-6 items-center'>
