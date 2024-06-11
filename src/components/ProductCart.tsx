@@ -2,7 +2,7 @@ import { Minus, Plus, Trash2 } from 'lucide-react'
 
 export function ProductCart() {
 	return (
-		<div className='flex items-center gap-2 p-2 bg-zinc-50 rounded-lg border border-zinc-400 hover:bg-zinc-100 transition'>
+		<div className='flex items-center gap-2 p-2 bg-zinc-50 dark:bg-zinc-800 rounded-lg border border-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-700 transition'>
 			<img
 				src='https://www.myimaginestore.com/media/mf_webp/jpeg/media/catalog/product/cache/4a48ac28cbb6e9c41470e5be5a6d3043/a/i/air-gold_2.webp'
 				alt='Macbook'

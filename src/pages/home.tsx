@@ -12,7 +12,7 @@ export function Home() {
 					<select
 						name='price'
 						id='price'
-						className='focus:outline-none text-center'>
+						className='focus:outline-none text-center bg-transparent'>
 						<option defaultValue={'default'} value='default'>
 							Filtre por preço
 						</option>

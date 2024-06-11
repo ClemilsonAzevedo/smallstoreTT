@@ -9,7 +9,7 @@ export function CheckoutPayment() {
 	}
 
 	return (
-		<section className='flex gap-4 flex-col items-center justify-start min-h-screen'>
+		<section className='flex gap-4 flex-col items-center justify-start min-h-screen dark:bg-zinc-900'>
 			<div className='mr-auto'>
 				<BackButton />
 			</div>
@@ -29,7 +29,7 @@ export function CheckoutPayment() {
 							name='email'
 							id='email'
 							placeholder='JohnDoe@email.com'
-							className='w-[400px] px-2 py-3 border border-zinc-400 rounded-lg placeholder:text-zinc-400'
+							className='w-[400px] px-2 py-3 border border-zinc-400 bg-transparent rounded-lg placeholder:text-zinc-400'
 						/>
 					</div>
 
@@ -42,7 +42,7 @@ export function CheckoutPayment() {
 							name='name'
 							id='name'
 							placeholder='John Doe'
-							className='w-[400px] px-2 py-3 border border-zinc-400 rounded-lg placeholder:text-zinc-400'
+							className='w-[400px] px-2 py-3 border bg-transparent border-zinc-400 rounded-lg placeholder:text-zinc-400'
 						/>
 					</div>
 				</div>
@@ -57,7 +57,7 @@ export function CheckoutPayment() {
 							name='card-number'
 							id='card-number'
 							placeholder='4220 3600 0000 0000'
-							className='flex-1 placeholder:text-zinc-400 focus:outline-none'
+							className='flex-1 placeholder:text-zinc-400 bg-transparent focus:outline-none'
 						/>
 						<CreditCard />
 					</div>
@@ -65,13 +65,13 @@ export function CheckoutPayment() {
 						<input
 							type='number'
 							placeholder='MM / yy'
-							className='w-[200px] px-2 py-3 border border-zinc-400 rounded-bl-lg placeholder:text-zinc-400'
+							className='w-[200px] px-2 py-3 border border-zinc-400 rounded-bl-lg bg-transparent placeholder:text-zinc-400'
 						/>
 						<input
 							type='number'
 							placeholder='CVV'
 							max={3}
-							className='w-[200px] px-2 py-3 border border-zinc-400 rounded-br-lg placeholder:text-zinc-400'
+							className='w-[200px] px-2 py-3 border border-zinc-400 rounded-br-lg bg-transparent placeholder:text-zinc-400'
 						/>
 					</div>
 				</div>

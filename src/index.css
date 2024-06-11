@@ -2,8 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+body.dark {
+  @apply bg-zinc-900;
+  @apply text-zinc-50;
+}
+
+body,
+input,
+textarea,
+button {
   font-family: "Poppins", sans-serif;
-  color: #18181b;
-  background-color: #fafafa;
+  font-weight: 400;
+  font-size: 1rem;
 }

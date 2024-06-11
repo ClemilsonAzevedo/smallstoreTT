@@ -1,6 +1,7 @@
 import { ShoppingCart, Sun } from 'lucide-react'
 import { useState } from 'react'
 import { CartDrawer } from './CartDrawer'
+import { SwitchThemeMode } from './SwitchThemeMode'
 
 export function Header() {
 	const [isCartDrawerOpen, setIsDrawerOpen] = useState(false)
@@ -25,7 +26,7 @@ export function Header() {
 					/>
 				</div>
 			</div>
-			<Sun size={24} />
+			<SwitchThemeMode />
 		</header>
 	)
 }
