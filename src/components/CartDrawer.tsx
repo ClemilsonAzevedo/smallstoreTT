@@ -47,11 +47,11 @@ export function CartDrawer({
 
 				<a
 					href='/checkout'
-					className='flex ml-auto px-6 py-3 rounded-lg bg-violet-500 text-zinc-200 items-center justify-center hover:bg-violet-700'>
+					className='flex ml-auto sm:max-w-max px-6 py-3 rounded-lg bg-violet-500 text-zinc-200 items-center justify-center hover:bg-violet-700'>
 					Fazer Pagamento
 				</a>
 
-				<div className='space-y-2 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-2'>
+				<div className='space-y-2 md:space-y-0 md:grid md:grid-cols-2 md:gap-2'>
 					<ProductCart />
 					<ProductCart />
 					<ProductCart />
