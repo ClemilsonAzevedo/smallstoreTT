@@ -1,5 +1,6 @@
 import { CreditCard } from "lucide-react";
 import { FormEvent } from "react";
+import { BackButton } from "../components/BackButton";
 
 export function CheckoutPayment(){
 
@@ -11,6 +12,9 @@ export function CheckoutPayment(){
 
   return(
     <section className="flex gap-4 flex-col items-center justify-start min-h-screen">
+      <div className="mr-auto">
+        <BackButton />
+      </div>
       <h2 className="text-2xl">Realizar pagamento</h2>
       <span className="text-2xl font-bold">R$ 14,000.29</span>
 
