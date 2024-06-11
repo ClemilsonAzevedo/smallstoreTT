@@ -1,13 +1,19 @@
 import { Filter } from 'lucide-react'
+import { useState } from 'react'
 import { products } from '../Products.json'
 import { Product } from '../components/Product'
 import { SearchInput } from '../components/SearchInput'
 
 export function Home() {
+	const [filteredProducts, setFilteredProducts] = useState(products)
+
 	return (
 		<>
 			<div className='space-y-2 md:flex md:gap-4'>
-				<SearchInput />
+				<SearchInput
+					productList={products}
+					setFilteredProducts={setFilteredProducts}
+				/>
 				<div className='border border-zinc-400 px-2 py-3 rounded-lg flex items-center max-w-max text-zinc-700'>
 					<Filter size={20} className='text-zinc-400' />
 					<select
@@ -25,7 +31,7 @@ export function Home() {
 			</div>
 
 			<div className='space-y-2 md:space-y-0 md:flex md:flex-wrap md:gap-4 md:justify-center'>
-				{products.map(product => (
+				{filteredProducts.map(product => (
 					<Product
 						key={product.id}
 						id={product.id}

@@ -1,12 +1,12 @@
 import { ShoppingCart } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-interface ProductProps {
-	id?: string
+export interface ProductProps {
+	id: string
 	name: string
 	description: string
 	price: string
-	imageUrl?: string
+	imageUrl: string
 }
 
 export function Product({

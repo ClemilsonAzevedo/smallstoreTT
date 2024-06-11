@@ -15,7 +15,7 @@ export function ProductDetail() {
 					<div className='w-full lg:min-w-[400px] h-[327px] bg-zinc-200 p-2 rounded-lg'>
 						<img
 							src={productFoundById?.imageUrl}
-							alt='Macbook'
+							alt='Product'
 							className='rounded-lg w-full h-full aspect-square object-cover'
 						/>
 					</div>
