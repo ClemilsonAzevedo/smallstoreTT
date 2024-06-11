@@ -9,7 +9,10 @@ export function Home() {
 				<SearchInput />
 				<div className='border border-zinc-400 px-2 py-3 rounded-lg flex items-center max-w-max text-zinc-700'>
 					<Filter size={20} className='text-zinc-400' />
-					<select name='' id='' className='focus:outline-none text-center'>
+					<select
+						name='price'
+						id='price'
+						className='focus:outline-none text-center'>
 						<option defaultValue={'default'} value='default'>
 							Filtre por preço
 						</option>
@@ -20,8 +23,7 @@ export function Home() {
 				</div>
 			</div>
 
-			<div className='space-y-2'>
-				<Product />
+			<div className='space-y-2 md:space-y-0 md:flex md:flex-wrap md:gap-4 md:justify-center'>
 				<Product />
 				<Product />
 				<Product />

@@ -2,7 +2,7 @@ import { ShoppingCart } from 'lucide-react'
 
 export function Product() {
 	return (
-		<div className='flex flex-col gap-4 bg-zinc-200 p-2 rounded-lg'>
+		<div className='flex flex-col gap-4 bg-zinc-200 p-2 rounded-lg md:w-[300px] md:h-[400px]'>
 			<div className='w-full h-[200px] relative group'>
 				<img
 					src='https://www.myimaginestore.com/media/mf_webp/jpeg/media/catalog/product/cache/4a48ac28cbb6e9c41470e5be5a6d3043/a/i/air-gold_2.webp'
