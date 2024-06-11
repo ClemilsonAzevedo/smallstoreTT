@@ -5,7 +5,7 @@ import { SearchInput } from '../components/SearchInput'
 export function Home() {
 	return (
 		<>
-			<div className='space-y-2'>
+			<div className='space-y-2 md:flex md:gap-4'>
 				<SearchInput />
 				<div className='border border-zinc-400 px-2 py-3 rounded-lg flex items-center max-w-max text-zinc-700'>
 					<Filter size={20} className='text-zinc-400' />
