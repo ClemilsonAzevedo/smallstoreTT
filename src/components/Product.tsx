@@ -10,6 +10,7 @@ interface ProductProps {
 }
 
 export function Product({
+	id,
 	name,
 	description,
 	price,
@@ -25,7 +26,7 @@ export function Product({
 				/>
 				<div className='bg-black/50 absolute inset-0 rounded-lg hidden group-hover:flex items-center justify-center'>
 					<Link
-						to='/product/:productId/detail'
+						to={`/product/${id}/detail`}
 						className='text-zinc-200 border border-zinc-200 rounded-lg px-3 py-2 hover:bg-zinc-200 hover:text-zinc-900 transition'>
 						Visualizar Produto
 					</Link>
