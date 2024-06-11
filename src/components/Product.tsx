@@ -14,7 +14,7 @@ export function Product({
 	name,
 	description,
 	price,
-	imageUrl = 'https://www.myimaginestore.com/media/mf_webp/jpeg/media/catalog/product/cache/4a48ac28cbb6e9c41470e5be5a6d3043/a/i/air-gold_2.webp',
+	imageUrl = 'https://cdn2.iconfinder.com/data/icons/pictograms-5/24/Nophoto-512.png',
 }: ProductProps) {
 	return (
 		<div className='flex flex-col gap-4 bg-zinc-200 dark:bg-zinc-700 p-2 rounded-lg md:w-[300px] md:h-[400px]'>

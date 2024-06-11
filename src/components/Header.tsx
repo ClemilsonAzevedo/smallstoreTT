@@ -1,4 +1,4 @@
-import { ShoppingCart, Sun } from 'lucide-react'
+import { ShoppingCart } from 'lucide-react'
 import { useState } from 'react'
 import { CartDrawer } from './CartDrawer'
 import { SwitchThemeMode } from './SwitchThemeMode'

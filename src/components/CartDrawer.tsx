@@ -1,6 +1,6 @@
 import { ChevronLeft } from 'lucide-react'
-import { ProductCart } from './ProductCart'
 import { Link } from 'react-router-dom'
+import { ProductCart } from './ProductCart'
 
 interface CartDrawerProps {
 	isCartDrawerOpen: boolean
