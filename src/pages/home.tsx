@@ -1,4 +1,5 @@
 import { Filter } from 'lucide-react'
+import { products } from '../Products.json'
 import { Product } from '../components/Product'
 import { SearchInput } from '../components/SearchInput'
 
@@ -24,11 +25,15 @@ export function Home() {
 			</div>
 
 			<div className='space-y-2 md:space-y-0 md:flex md:flex-wrap md:gap-4 md:justify-center'>
-				<Product />
-				<Product />
-				<Product />
-				<Product />
-				<Product />
+				{products.map(product => (
+					<Product
+						key={product.id}
+						name={product.name}
+						price={product.price}
+						imageUrl={product.imageUrl}
+						description={product.description}
+					/>
+				))}
 			</div>
 		</>
 	)
