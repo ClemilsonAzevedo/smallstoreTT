@@ -35,9 +35,6 @@ export function CartDrawer({
           <span className='font-medium text-xl'>Voltar</span>
         </button>
 
-        <button className='flex ml-auto px-6 py-3 rounded-lg bg-violet-500 text-zinc-200 items-center justify-center hover:bg-violet-700'>
-          Fazer Pagamento
-        </button>
 
         <div className='grid grid-cols-2 w-full h-[90px] gap-2 text-zinc-700'>
           <div className='text-center space-y-2 py-2 border border-zinc-400 rounded-lg h-full'>
@@ -51,6 +48,10 @@ export function CartDrawer({
           </div>
         </div>
 
+        <a href='/checkout' className='flex ml-auto px-6 py-3 rounded-lg bg-violet-500 text-zinc-200 items-center justify-center hover:bg-violet-700'>
+          Fazer Pagamento
+        </a>
+        
         <div className='space-y-2'>
           <ProductCart />
           <ProductCart />
