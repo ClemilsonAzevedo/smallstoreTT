@@ -4,98 +4,98 @@
 			"id": "EYFQHG",
 			"name": "Amazon Echo Dot",
 			"description": "O Amazon Echo Dot é um alto-falante inteligente controlado por voz com Alexa, perfeito para qualquer ambiente. Pequeno e compacto, oferece som de alta qualidade e pode ser usado para reproduzir música, controlar dispositivos domésticos inteligentes, obter informações, fazer chamadas e muito mais.",
-			"price": "R$ 49,99",
+			"price": 49.99,
 			"imageUrl": "https://target.scene7.com/is/image/Target/GUEST_b691e23e-cd5c-4e5e-a01a-b1d5124e65c6?wid=488&hei=488&fmt=pjpeg"
 		},
 		{
 			"id": "VXRCSM",
 			"name": "Mouse Pad",
 			"description": "O Mouse Pad é ideal para gamers e profissionais que necessitam de precisão nos movimentos do mouse. Com uma superfície de tecido suave e uma base antiderrapante, proporciona controle preciso e conforto durante longas sessões de uso.",
-			"price": "R$ 29,99",
+			"price": 29.99,
 			"imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbEha9eNJ0nLJjmVyZpIIWnfPiIwAsiIOE_g&s"
 		},
 		{
 			"id": "QPKJMX",
 			"name": "Cabo USB-C",
 			"description": "O Cabo USB-C oferece uma solução de carregamento rápida e eficiente para dispositivos compatíveis com USB-C. Compatível com uma variedade de dispositivos, é durável e confiável para uso diário.",
-			"price": "R$ 19,99",
+			"price": 19.99,
 			"imageUrl": "https://romo.b-cdn.net/tecnologia/2348-large_default/-cabo-usb-c-480mbits-75cm-usb20-hama-.jpg"
 		},
 		{
 			"id": "ZLWNGR",
 			"name": "Película Protetora para iPhone",
 			"description": "A Película Protetora para iPhone é feita de vidro temperado de alta qualidade, oferecendo proteção robusta contra arranhões, quedas e impactos. Fácil de instalar e com alta transparência, preserva a qualidade da tela do seu iPhone.",
-			"price": "R$ 39,99",
+			"price": 39.99,
 			"imageUrl": "https://a-static.mlcdn.com.br/450x450/pelicula-protetora-maleavel-hidrogel-para-iphone-7-plus-lxl/lojasuprint2/15934597079/d15ec78bdd796166c8ee118a34b52f80.jpeg"
 		},
 		{
 			"id": "HKVSNE",
 			"name": "Carregador de Parede USB",
 			"description": "O Carregador de Parede USB é compatível com uma ampla variedade de dispositivos, incluindo smartphones, tablets, câmeras e muito mais. Com portas USB de alta potência, permite um carregamento rápido e eficiente em casa ou no escritório.",
-			"price": "R$ 24,99",
+			"price": 24.99,
 			"imageUrl": "https://b2bleonorashop.vtexassets.com/arquivos/ids/161101-800-auto?v=638047435003830000&width=800&height=auto&aspect=true"
 		},
 		{
 			"id": "FLYUJM",
 			"name": "MacBook Pro",
 			"description": "O MacBook Pro é um poderoso laptop que combina desempenho e portabilidade. Com um design elegante e uma tela de alta resolução, é perfeito para profissionais criativos, estudantes e qualquer pessoa que exija alto desempenho em um formato compacto.",
-			"price": "R$ 9.999,99",
+			"price": 9999.99,
 			"imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs8pKM_XLWZgUlKAvZtlcaNUAj2EZDcGZXqg&s"
 		},
 		{
 			"id": "SDHRTA",
 			"name": "iPhone 13",
 			"description": "O iPhone 13 é o mais recente smartphone da Apple, repleto de recursos avançados e um design elegante. Com uma câmera poderosa, desempenho rápido e uma tela vibrante, oferece uma experiência de uso excepcional para qualquer pessoa.",
-			"price": "R$ 5.999,99",
+			"price": 5999.99,
 			"imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpqUgKTFS0Ym6GkhEdMzICbHKSiYl8naGTHQ&s"
 		},
 		{
 			"id": "NFBTWH",
 			"name": "iPad Pro",
 			"description": "O iPad Pro é um tablet profissional projetado para produtividade e criatividade. Com um poderoso processador, uma tela impressionante e suporte para acessórios como o Apple Pencil e o Magic Keyboard, é a escolha ideal para profissionais exigentes.",
-			"price": "R$ 4.799,99",
+			"price": 4799.99,
 			"imageUrl": "https://www.machines.com.my/cdn/shop/products/iPad_Pro_Wi-Fi_12-9_in_6th_Gen_Space_Gray_PDP_Image_Position-1b__SG_b5e9699f-225b-4ea2-a2c8-29c89a03a7b9_823x.jpg?v=1705417432"
 		},
 		{
 			"id": "JRGKUX",
 			"name": "Apple Watch Series 7",
 			"description": "O Apple Watch Series 7 é o smartwatch mais avançado da Apple, oferecendo recursos de monitoramento de saúde, fitness e conectividade. Com um design elegante e uma tela ampliada, mantém você conectado e informado durante todo o dia.",
-			"price": "R$ 2.399,99",
+			"price": 2399.99,
 			"imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLMSDBoI0osaoo-4HTM2-NH4Q-4Yq-fbGUjg&s"
 		},
 		{
 			"id": "CEFMNR",
 			"name": "AirPods Pro",
 			"description": "Os AirPods Pro são fones de ouvido sem fio premium da Apple, oferecendo cancelamento ativo de ruído, áudio de alta qualidade e ajuste confortável. Com uma caixa de carregamento sem fio, são ideais para uso em movimento.",
-			"price": "R$ 1.249,99",
+			"price": 1249.99,
 			"imageUrl": "https://www.apple.com/newsroom/images/2023/09/apple-introduces-new-airpods-pro-2nd-generation/tile/Apple-AirPods-Pro-2nd-generation-USB-C-connection-230912.jpg.news_app_ed.jpg"
 		},
 		{
 			"id": "QNAYVB",
 			"name": "Samsung Galaxy S21",
 			"description": "O Samsung Galaxy S21 é um smartphone Android de última geração, oferecendo desempenho rápido, uma câmera versátil e uma tela impressionante. Com recursos avançados de conectividade e segurança, atende às necessidades dos usuários mais exigentes.",
-			"price": "R$ 3.999,99",
+			"price": 3999.99,
 			"imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb_RsJXg1eLT7b7ZoqGwZm8Xijsb_bJpC-Gw&s"
 		},
 		{
 			"id": "HPWMTD",
 			"name": "Dell XPS 13",
 			"description": "O Dell XPS 13 é um ultrabook premium que combina desempenho e portabilidade. Com um design elegante, uma tela de alta resolução e componentes de última geração, é ideal para profissionais que trabalham em movimento.",
-			"price": "R$ 5.499,99",
+			"price": 5499.99,
 			"imageUrl": "https://www.dell.com/community/assets/community/687062f5-603c-4f5f-ab9d-31aa7cacb376/DellXPS13Plusdevelopereditionw-cc000003-3aa9-42b7-b3ec-877fa475ffd9-721039270.JPG"
 		},
 		{
 			"id": "LCEJBV",
 			"name": "Sony WH-1000XM4",
 			"description": "O Sony WH-1000XM4 são fones de ouvido sem fio premium, oferecendo cancelamento de ruído adaptável, áudio de alta resolução e conforto excepcional. Com uma longa duração da bateria e controles intuitivos, são perfeitos para audiófilos e viajantes.",
-			"price": "R$ 1.749,99",
+			"price": 1749.99,
 			"imageUrl": "https://www.sony-asia.com/image/c837e2d6c39f74d4dd2338ada3dac203?fmt=pjpeg&wid=1014&hei=396&bgcolor=F1F5F9&bgc=F1F5F9"
 		},
 		{
 			"id": "ZYPGHW",
 			"name": "Google Pixel 6",
 			"description": "O Google Pixel 6 é o mais recente smartphone da Google, oferecendo uma câmera de ponta, uma interface limpa e recursos de inteligência artificial avançados. Com atualizações rápidas e segurança de primeira linha, é uma escolha sólida para entusiastas de tecnologia.",
-			"price": "R$ 2.999,99",
+			"price": 2999.99,
 			"imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy6_xw7rb7JnF2_FerKFMGf-VkgwL0x0QI5w&s"
 		}
 	]

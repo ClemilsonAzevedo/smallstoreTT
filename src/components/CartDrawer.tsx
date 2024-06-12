@@ -1,15 +1,29 @@
 import { ChevronLeft } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { ProductCart } from './ProductCart'
-
+import { formatCurrency } from '../utils/formatValueToCurrency'
+import { ProductCart, type ProductCartProps } from './ProductCart'
 interface CartDrawerProps {
 	isCartDrawerOpen: boolean
 	onCartDrawerClose: () => void
+	onRemoveFromCart: (id: string) => void
+	productsQuantity: number
+	shoppingCart: ProductCartProps[]
 }
 export function CartDrawer({
 	isCartDrawerOpen,
 	onCartDrawerClose,
+	onRemoveFromCart,
+	shoppingCart,
+	productsQuantity,
 }: CartDrawerProps) {
+	function calculateTotal(shoppingCart: ProductCartProps[]): number {
+		let total = 0
+		for (const item of shoppingCart) {
+			total += item.price * item.quantity
+		}
+		return total
+	}
+
 	return (
 		<div
 			className={`fixed min-h-screen inset-0 flex items-end justify-center z-20 ${
@@ -36,13 +50,15 @@ export function CartDrawer({
 
 				<div className='grid grid-cols-2 w-full h-[90px] gap-2 text-zinc-700 dark:text-zinc-200'>
 					<div className='text-center space-y-2 py-2 border border-zinc-400 rounded-lg h-full'>
-						<span className='text-[2rem] font-bold'>7</span>
+						<span className='text-[2rem] font-bold'>{productsQuantity}</span>
 						<p className='text-xs '>Quantidade de produtos</p>
 					</div>
 
 					<div className='border border-zinc-400 rounded-lg h-full flex flex-col justify-between p-2'>
 						<p className='text-xs'>Valor a pagar</p>
-						<span className='text-center text-xl font-bold'>R$ 14,000.98</span>
+						<span className='text-center text-xl font-bold'>
+							{formatCurrency(calculateTotal(shoppingCart))}
+						</span>
 					</div>
 				</div>
 
@@ -53,9 +69,24 @@ export function CartDrawer({
 				</Link>
 
 				<div className='space-y-2 md:space-y-0 md:grid md:grid-cols-2 md:gap-2'>
-					<ProductCart />
-					<ProductCart />
-					<ProductCart />
+					{shoppingCart.length === 0 ? (
+						<p className='text-2xl font-semibold'>O Carrinho está vazio</p>
+					) : (
+						shoppingCart.map(product => {
+							return (
+								<ProductCart
+									key={product.imageUrl}
+									id={product.id}
+									description=''
+									name={product.name}
+									price={product.price}
+									imageUrl={product.imageUrl}
+									quantity={product.quantity}
+									removeFromCart={() => onRemoveFromCart(product.id)}
+								/>
+							)
+						})
+					)}
 				</div>
 			</div>
 		</div>

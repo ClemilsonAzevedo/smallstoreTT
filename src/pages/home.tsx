@@ -1,14 +1,68 @@
+import { ShoppingCart } from 'lucide-react'
 import { useState } from 'react'
 import { products } from '../Products.json'
+import { CartDrawer } from '../components/CartDrawer'
 import { PriceProductFilter } from '../components/PriceProductFilter'
 import { Product } from '../components/Product'
+import type { ProductCartProps } from '../components/ProductCart'
 import { SearchInput } from '../components/SearchInput'
+import { handleAddItemOnCart } from '../utils/handleAddNewProduct'
 
 export function Home() {
 	const [filteredProducts, setFilteredProducts] = useState(products)
+	const [isCartDrawerOpen, setIsCartDrawerOpen] = useState(false)
+	const [shoppingCart, setShoppingCart] = useState<ProductCartProps[]>([])
+
+	function toggleCartDrawer() {
+		setIsCartDrawerOpen(!isCartDrawerOpen)
+	}
+
+	function calculateTotalQuantity(shoppingCart: ProductCartProps[]) {
+		// Verifica se o carrinho está vazio
+		if (shoppingCart.length === 0) {
+			return 0
+		}
+
+		// Soma todas as quantidades dos itens no carrinho
+		const totalQuantity = shoppingCart.reduce((accumulator, currentItem) => {
+			return accumulator + currentItem.quantity
+		}, 0)
+
+		return totalQuantity
+	}
+
+	function handleRemoveItemOnCart(id: string) {
+		// Encontra o índice do item no carrinho
+		const itemIndex = shoppingCart.findIndex(product => product.id === id)
+
+		// Se o item estiver no carrinho, atualiza a quantidade ou remove-o
+		if (itemIndex !== -1) {
+			const updatedShoppingCart = [...shoppingCart]
+			updatedShoppingCart[itemIndex] = {
+				...updatedShoppingCart[itemIndex],
+				quantity: updatedShoppingCart[itemIndex].quantity - 1,
+			}
+
+			// Se a quantidade do item for zero, remove-o do carrinho
+			if (updatedShoppingCart[itemIndex].quantity === 0) {
+				updatedShoppingCart.splice(itemIndex, 1)
+			}
+
+			// Define o estado do carrinho com o novo array de itens
+			setShoppingCart(updatedShoppingCart)
+		}
+	}
 
 	return (
 		<>
+			<div className='flex justify-start items-center'>
+				<button type='button' onClick={toggleCartDrawer} className='relative'>
+					<ShoppingCart />
+					<span className='bg-violet-500 w-6 h-6 rounded-full absolute -top-3 -right-4 text-xs flex items-center justify-center text-zinc-50'>
+						{calculateTotalQuantity(shoppingCart)}
+					</span>
+				</button>
+			</div>
 			<div className='space-y-2 md:flex md:gap-4'>
 				<SearchInput
 					productList={products}
@@ -29,9 +83,20 @@ export function Home() {
 						price={product.price}
 						imageUrl={product.imageUrl}
 						description={product.description}
+						onAddToCart={() =>
+							handleAddItemOnCart(product.id, shoppingCart, setShoppingCart)
+						}
 					/>
 				))}
 			</div>
+
+			<CartDrawer
+				onRemoveFromCart={handleRemoveItemOnCart}
+				productsQuantity={calculateTotalQuantity(shoppingCart)}
+				shoppingCart={shoppingCart}
+				isCartDrawerOpen={isCartDrawerOpen}
+				onCartDrawerClose={toggleCartDrawer}
+			/>
 		</>
 	)
 }

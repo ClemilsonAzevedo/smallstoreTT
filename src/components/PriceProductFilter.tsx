@@ -16,48 +16,16 @@ export function PriceProductFilter({
 		let filtered = products
 		switch (selectedOption) {
 			case '0-50':
-				filtered = products.filter(
-					product =>
-						Number.parseFloat(
-							product.price
-								.replace('R$', '')
-								.replace('.', '')
-								.replace(',', '.'),
-						) <= 50,
-				)
+				filtered = products.filter(product => product.price <= 50)
 				break
 			case '51-500':
 				filtered = products.filter(
-					product =>
-						Number.parseFloat(
-							product.price
-								.replace('R$', '')
-								.replace('.', '')
-								.replace(',', '.'),
-						) > 50 &&
-						Number.parseFloat(
-							product.price
-								.replace('R$', '')
-								.replace('.', '')
-								.replace(',', '.'),
-						) <= 500,
+					product => product.price > 50 && product.price <= 500,
 				)
 				break
 			case '501-20000':
 				filtered = products.filter(
-					product =>
-						Number.parseFloat(
-							product.price
-								.replace('R$', '')
-								.replace('.', '')
-								.replace(',', '.'),
-						) > 500 &&
-						Number.parseFloat(
-							product.price
-								.replace('R$', '')
-								.replace('.', '')
-								.replace(',', '.'),
-						) <= 20000,
+					product => product.price > 500 && product.price <= 20000,
 				)
 				break
 			default:

@@ -14,7 +14,6 @@
 			"quoteStyle": "single",
 			"jsxQuoteStyle": "single",
 			"quoteProperties": "asNeeded",
-			"trailingComma": "all",
 			"semicolons": "asNeeded",
 			"arrowParentheses": "asNeeded",
 			"enabled": true,

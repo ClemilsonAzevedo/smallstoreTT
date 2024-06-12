@@ -1,12 +1,14 @@
 import { ShoppingCart } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { formatCurrency } from '../utils/formatValueToCurrency'
 
 export interface ProductProps {
 	id: string
 	name: string
 	description: string
-	price: string
+	price: number
 	imageUrl: string
+	onAddToCart?: () => void
 }
 
 export function Product({
@@ -14,6 +16,7 @@ export function Product({
 	name,
 	description,
 	price,
+	onAddToCart,
 	imageUrl = 'https://cdn2.iconfinder.com/data/icons/pictograms-5/24/Nophoto-512.png',
 }: ProductProps) {
 	return (
@@ -41,10 +44,11 @@ export function Product({
 					{description}
 				</p>
 				<div className='flex justify-between items-center w-full'>
-					<span className='font-medium text-lg'>{price}</span>
+					<span className='font-medium text-lg'>{formatCurrency(price)}</span>
 
 					<button
 						type='button'
+						onClick={onAddToCart}
 						className='bg-violet-500 hover:bg-violet-700 rounded-lg px-3 h-12 text-zinc-200 flex justify-center items-center group'>
 						<ShoppingCart size={20} />
 						<span className='text-xs max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-linear'>

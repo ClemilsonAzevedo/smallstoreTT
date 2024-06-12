@@ -1,11 +1,18 @@
 import { ShoppingCart } from 'lucide-react'
+import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { products } from '../Products.json'
 import { BackButton } from '../components/BackButton'
+import type { ProductCartProps } from '../components/ProductCart'
+import { formatCurrency } from '../utils/formatValueToCurrency'
+import { handleAddItemOnCart } from '../utils/handleAddNewProduct'
 
 export function ProductDetail() {
+	const [shoppingCart, setShoppingCart] = useState<ProductCartProps[]>([])
+
 	const { productId } = useParams()
 	const productFoundById = products.find(product => product.id === productId)
+	const formateProductPrice = productFoundById!.price
 
 	return (
 		<section className='space-y-8'>
@@ -22,12 +29,15 @@ export function ProductDetail() {
 					<div className='flex flex-1 items-center justify-between'>
 						<button
 							type='button'
+							onClick={() =>
+								handleAddItemOnCart(productId!, shoppingCart, setShoppingCart)
+							}
 							className='flex gap-2 bg-violet-500 hover:bg-violet-700 text-zinc-200 text-sm items-center px-6 py-3 rounded-lg transition'>
 							<ShoppingCart />
 							Adicionar ao carrinho
 						</button>
 						<span className='flex-1 text-right font-medium text-xl'>
-							{productFoundById?.price}
+							{formatCurrency(formateProductPrice)}
 						</span>
 					</div>
 				</div>
