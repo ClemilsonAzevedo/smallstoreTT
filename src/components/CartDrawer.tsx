@@ -66,7 +66,7 @@ export function CartDrawer({
 				/>
 
 				{/* Lista de produtos no carrinho */}
-				<div className='flex-1 overflow-y-auto space-y-2 md:grid md:grid-cols-2 md:items-end md:h-full md:gap-2'>
+				<div className='flex-1 overflow-y-auto space-y-2 md:space-y-0 md:grid md:grid-cols-2 md:place-content-end md:h-full md:gap-2'>
 					{shoppingCart.length === 0 ? (
 						<p className='text-2xl font-semibold'>O Carrinho está vazio</p>
 					) : (
