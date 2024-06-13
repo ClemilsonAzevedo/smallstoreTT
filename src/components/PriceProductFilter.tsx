@@ -13,7 +13,8 @@ export function PriceProductFilter({
 }: PriceProductsFilterProps) {
 	// Função para lidar com a mudança de filtro de preço
 	function handlePriceFilterChange(event: ChangeEvent) {
-		const selectedOption = event.target.value
+		const selectedOption = (event.target as HTMLInputElement).value;
+
 		let filtered = products
 
 		// Filtra os produtos com base na opção selecionada

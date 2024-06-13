@@ -4,6 +4,7 @@ import { products } from '../Products.json'
 import { BackButton } from '../components/BackButton'
 import { useCart } from '../context/cartContext' // Importe o hook useCart
 import { formatCurrency } from '../utils/formatValueToCurrency'
+import { ProductCartProps } from '../components/ProductCart'
 
 export function ProductDetail() {
 	const { productId } = useParams() // Obtém o ID do produto a partir dos parâmetros da URL
@@ -31,16 +32,17 @@ export function ProductDetail() {
 			})
 			setShoppingCart(newShoppingCart)
 		} else {
-			const cartItem = {
-				id: productId,
-				name: productFoundById?.name,
-				imageUrl: productFoundById?.imageUrl,
-				price: productFoundById?.price,
-				quantity: 1,
-				description: productFoundById!.description,
-			}
-			setShoppingCart([...shoppingCart, cartItem])
-		}
+    const cartItem: ProductCartProps = { // Certifique-se de que cartItem seja do tipo ProductCartProps
+      id: productId!,
+      name: productFoundById!.name,
+      imageUrl: productFoundById!.imageUrl,
+      price: productFoundById!.price,
+      quantity: 1,
+      description: productFoundById!.description,
+      removeFromCart: () => {}
+    };
+    setShoppingCart([...shoppingCart, cartItem]);
+  }
 	}
 
 	return (
