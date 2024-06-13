@@ -6,7 +6,7 @@ Para que eu pudesse me guiar eu desenvolvi o design no Figma deste projecto, ape
 
 **Design:** [Link para o Design](https://www.figma.com/design/Y7UbCIJuxA8o8YpK9CRfap/SmallStoreTT?node-id=1-3&t=kUlPrC3KPAEi7JZ3-1)
 
-**Deploy:** [Link para o Deploy](#)
+**Deploy:** [Link para o Deploy](https://smallstore-tt.vercel.app/)
 
 ## Descrição do Projeto
 Small Store é uma aplicação web de uma pequena e simples loja online que permite aos usuários visualizar produtos, adicionar itens ao carrinho, remover itens do carrinho e finalizar a compra. O projeto foi desenvolvido com React.js, Typescript e tailwind e utiliza contextos para gerenciar o estado global da aplicação.
