@@ -1,5 +1,9 @@
 # Small Store
 
+<div align="center" style="display: inline_block">
+  <img alt="Project Presentation" width="80%" src="./.github/cover.png">
+</div>
+
 ## Deploy & Design 
 
 Para que eu pudesse me guiar eu desenvolvi o design no Figma deste projecto, apenas para me basear, nem tudo é como está no Figma mas o Deploy pode ser visto. Seguem os Links:
