@@ -1,18 +1,47 @@
 import { ShoppingCart } from 'lucide-react'
-import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { products } from '../Products.json'
 import { BackButton } from '../components/BackButton'
-import type { ProductCartProps } from '../components/ProductCart'
+import { useCart } from '../context/cartContext' // Importe o hook useCart
 import { formatCurrency } from '../utils/formatValueToCurrency'
-import { handleAddItemOnCart } from '../utils/handleAddNewProduct'
 
 export function ProductDetail() {
-	const [shoppingCart, setShoppingCart] = useState<ProductCartProps[]>([])
-
-	const { productId } = useParams()
-	const productFoundById = products.find(product => product.id === productId)
+	const { productId } = useParams() // Obtém o ID do produto a partir dos parâmetros da URL
+	const productFoundById = products.find(product => product.id === productId) // Encontra o produto pelo ID
 	const formateProductPrice = productFoundById!.price
+
+	// Acesse o estado do carrinho utilizando o hook useCart
+	const { shoppingCart, setShoppingCart } = useCart()
+
+	// Função para adicionar o item ao carrinho
+	const addToCart = () => {
+		const alreadyInShoppingCart = shoppingCart.find(
+			product => product.id === productId,
+		)
+
+		if (alreadyInShoppingCart) {
+			const newShoppingCart = shoppingCart.map(product => {
+				if (product.id === productId) {
+					return {
+						...product,
+						quantity: product.quantity + 1,
+					}
+				}
+				return product
+			})
+			setShoppingCart(newShoppingCart)
+		} else {
+			const cartItem = {
+				id: productId,
+				name: productFoundById?.name,
+				imageUrl: productFoundById?.imageUrl,
+				price: productFoundById?.price,
+				quantity: 1,
+				description: productFoundById!.description,
+			}
+			setShoppingCart([...shoppingCart, cartItem])
+		}
+	}
 
 	return (
 		<section className='space-y-8'>
@@ -29,14 +58,13 @@ export function ProductDetail() {
 					<div className='flex flex-1 items-center justify-between'>
 						<button
 							type='button'
-							onClick={() =>
-								handleAddItemOnCart(productId!, shoppingCart, setShoppingCart)
-							}
+							onClick={addToCart} // Chama a função de adicionar ao carrinho
 							className='flex gap-2 bg-violet-500 hover:bg-violet-700 text-zinc-200 text-sm items-center px-6 py-3 rounded-lg transition'>
 							<ShoppingCart />
 							Adicionar ao carrinho
 						</button>
 						<span className='flex-1 text-right font-medium text-xl'>
+							{/*Formata o preço usando a função de formatar a moeda*/}
 							{formatCurrency(formateProductPrice)}
 						</span>
 					</div>

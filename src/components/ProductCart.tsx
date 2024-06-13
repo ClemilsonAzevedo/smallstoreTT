@@ -1,10 +1,10 @@
-import { Minus, Plus, Trash2 } from 'lucide-react'
+import { Trash2 } from 'lucide-react'
 import { formatCurrency } from '../utils/formatValueToCurrency'
 import type { ProductProps } from './Product'
 
 export interface ProductCartProps extends ProductProps {
 	quantity: number
-	removeFromCart: (id: string) => void
+	removeFromCart: (id: string) => void // Função para remover o produto do carrinho
 }
 
 export function ProductCart({
@@ -25,6 +25,8 @@ export function ProductCart({
 			<div className='flex-1 flex flex-col gap-2'>
 				<div className='flex items-center justify-between'>
 					<h6 className='text-ellipsis font-semibold flex-1'>{name}</h6>
+
+					{/* Botão para remover o produto do carrinho */}
 					<button type='button' onClick={() => removeFromCart(id)}>
 						<Trash2
 							size={20}
@@ -33,11 +35,11 @@ export function ProductCart({
 					</button>
 				</div>
 				<div className='flex items-center gap-1 mb-2 bg-zinc-200 max-w-max p-1 rounded-lg'>
-					<Minus size={20} className='text-zinc-900' />
+					<span className='text-zinc-500'>Qtd:</span>
 					<span className='text-zinc-500'>{quantity}</span>
-					<Plus size={20} className='text-zinc-900' />
 				</div>
 				<span className='flex-1 text-right font-medium'>
+					{/* Preço formatado do produto */}
 					{formatCurrency(price)}
 				</span>
 			</div>

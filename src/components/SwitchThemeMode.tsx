@@ -20,12 +20,12 @@ export function SwitchThemeMode() {
 		const savedTheme = localStorage.getItem('theme')
 
 		if (savedTheme === 'dark') {
-			setTheme(<Moon />) // Define o ícone do tema como Lua se o tema salvo for escuro
-			setIsDarkTheme(true) // Define o estado do tema como escuro
+			setTheme(<Moon />)
+			setIsDarkTheme(true)
 			htmlClasses.add('dark') // Aplica a classe 'dark' ao elemento raiz do HTML
 		} else {
-			setTheme(<Sun />) // Define o ícone do tema como Sol se o tema salvo for claro
-			setIsDarkTheme(false) // Define o estado do tema como claro
+			setTheme(<Sun />)
+			setIsDarkTheme(false)
 			htmlClasses.remove('dark') // Remove a classe 'dark' do elemento raiz do HTML
 		}
 
@@ -34,11 +34,11 @@ export function SwitchThemeMode() {
 				if (mutation.attributeName === 'class') {
 					if (htmlClasses.contains('dark')) {
 						setTheme(<Moon />) // Define o ícone do tema como Lua se a classe 'dark' estiver presente
-						setIsDarkTheme(true) // Define o estado do tema como escuro
+						setIsDarkTheme(true)
 						localStorage.setItem('theme', 'dark') // Armazena o tema escuro no localStorage
 					} else {
-						setTheme(<Sun />) // Define o ícone do tema como Sol se a classe 'dark' não estiver presente
-						setIsDarkTheme(false) // Define o estado do tema como claro
+						setTheme(<Sun />)
+						setIsDarkTheme(false)
 						localStorage.setItem('theme', 'light') // Armazena o tema claro no localStorage
 					}
 				}
@@ -60,13 +60,13 @@ export function SwitchThemeMode() {
 
 	const handleToggleTheme = () => {
 		if (isDarkTheme) {
-			setTheme(<Sun />) // Define o ícone do tema como Sol se o tema estiver escuro
-			setIsDarkTheme(false) // Define o estado do tema como claro
-			localStorage.setItem('theme', 'light') // Armazena o tema claro no localStorage
+			setTheme(<Sun />)
+			setIsDarkTheme(false)
+			localStorage.setItem('theme', 'light')
 		} else {
-			setTheme(<Moon />) // Define o ícone do tema como Lua se o tema estiver claro
-			setIsDarkTheme(true) // Define o estado do tema como escuro
-			localStorage.setItem('theme', 'dark') // Armazena o tema escuro no localStorage
+			setTheme(<Moon />)
+			setIsDarkTheme(true)
+			localStorage.setItem('theme', 'dark')
 		}
 		toggleThemeMode() // Alterna o modo de tema
 	}
@@ -74,6 +74,7 @@ export function SwitchThemeMode() {
 	return (
 		<button type='button' onClick={handleToggleTheme} className='transition'>
 			{theme}
+			{/*Mostra o ícone do tema */}
 		</button>
 	)
 }

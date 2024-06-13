@@ -8,7 +8,7 @@ export interface ProductProps {
 	description: string
 	price: number
 	imageUrl: string
-	onAddToCart?: () => void
+	onAddToCart?: () => void // Função opcional para adicionar o produto ao carrinho
 }
 
 export function Product({
@@ -40,7 +40,7 @@ export function Product({
 				<h3 className='text-center text-xl font-semibold text-ellipsis text-nowrap overflow-hidden w-full'>
 					{name}
 				</h3>
-				<p className='text-xs text-justify text-zinc-500 h-9 text-ellipsis overflow-hidden w-full'>
+				<p className='text-xs text-justify text-zinc-500 h-8 text-ellipsis overflow-hidden w-full'>
 					{description}
 				</p>
 				<div className='flex justify-between items-center w-full'>

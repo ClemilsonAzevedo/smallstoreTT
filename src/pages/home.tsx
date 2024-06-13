@@ -6,17 +6,20 @@ import { PriceProductFilter } from '../components/PriceProductFilter'
 import { Product } from '../components/Product'
 import type { ProductCartProps } from '../components/ProductCart'
 import { SearchInput } from '../components/SearchInput'
+import { useCart } from '../context/cartContext'
 import { handleAddItemOnCart } from '../utils/handleAddNewProduct'
 
 export function Home() {
 	const [filteredProducts, setFilteredProducts] = useState(products)
 	const [isCartDrawerOpen, setIsCartDrawerOpen] = useState(false)
-	const [shoppingCart, setShoppingCart] = useState<ProductCartProps[]>([])
+	const { shoppingCart, setShoppingCart } = useCart()
 
+	// Função para alternar entre a abertura e o fechamento do carrinho
 	function toggleCartDrawer() {
 		setIsCartDrawerOpen(!isCartDrawerOpen)
 	}
 
+	// Função para calcular a quantidade total de itens no carrinho
 	function calculateTotalQuantity(shoppingCart: ProductCartProps[]) {
 		// Verifica se o carrinho está vazio
 		if (shoppingCart.length === 0) {
@@ -31,6 +34,7 @@ export function Home() {
 		return totalQuantity
 	}
 
+	// Função para remover um item do carrinho
 	function handleRemoveItemOnCart(id: string) {
 		// Encontra o índice do item no carrinho
 		const itemIndex = shoppingCart.findIndex(product => product.id === id)
@@ -59,7 +63,8 @@ export function Home() {
 				<button type='button' onClick={toggleCartDrawer} className='relative'>
 					<ShoppingCart />
 					<span className='bg-violet-500 w-6 h-6 rounded-full absolute -top-3 -right-4 text-xs flex items-center justify-center text-zinc-50'>
-						{calculateTotalQuantity(shoppingCart)}
+						{calculateTotalQuantity(shoppingCart)}{' '}
+						{/* Exibe a quantidade total de itens no carrinho */}
 					</span>
 				</button>
 			</div>
@@ -91,6 +96,7 @@ export function Home() {
 			</div>
 
 			<CartDrawer
+				setShoppingCart={setShoppingCart}
 				onRemoveFromCart={handleRemoveItemOnCart}
 				productsQuantity={calculateTotalQuantity(shoppingCart)}
 				shoppingCart={shoppingCart}

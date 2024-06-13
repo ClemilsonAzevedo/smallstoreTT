@@ -26,12 +26,12 @@ export function SearchInput({
 				className='flex-1 focus:outline-none bg-transparent placeholder:text-zinc-400 text-sm'
 				value={searchTerm}
 				onChange={e => {
-					const newSearchTerm = e.target.value.toLowerCase()
+					const newSearchTerm = e.target.value.toLowerCase() // Atualiza o termo de busca
 					setSearchTerm(newSearchTerm)
 					const filteredProducts = productList.filter((product: ProductProps) =>
 						product.name.toLowerCase().includes(newSearchTerm),
 					)
-					setFilteredProducts(filteredProducts)
+					setFilteredProducts(filteredProducts) // Atualiza a lista de produtos filtrados
 				}}
 			/>
 		</div>

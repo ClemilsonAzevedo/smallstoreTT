@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 export function BackButton() {
 	const navigateHook = useNavigate()
 
+	// Manipula o clique no botão voltar, navega para a página anterior
 	function goToPreviousPage() {
 		navigateHook(-1)
 	}

@@ -11,9 +11,12 @@ export function PriceProductFilter({
 	products,
 	setFilteredProducts,
 }: PriceProductsFilterProps) {
+	// Função para lidar com a mudança de filtro de preço
 	function handlePriceFilterChange(event: ChangeEvent) {
 		const selectedOption = event.target.value
 		let filtered = products
+
+		// Filtra os produtos com base na opção selecionada
 		switch (selectedOption) {
 			case '0-50':
 				filtered = products.filter(product => product.price <= 50)
@@ -31,6 +34,7 @@ export function PriceProductFilter({
 			default:
 				break
 		}
+		// Atualiza a lista de produtos filtrados
 		setFilteredProducts(filtered)
 	}
 
