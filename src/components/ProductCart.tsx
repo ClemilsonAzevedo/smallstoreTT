@@ -22,9 +22,9 @@ export function ProductCart({
 				alt={name}
 				className='w-[100px] h-[100px] rounded-lg aspect-square object-cover'
 			/>
-			<div className='flex-1 flex flex-col gap-2'>
-				<div className='flex items-center justify-between'>
-					<h6 className='text-ellipsis font-semibold flex-1'>{name}</h6>
+			<div className='flex-1 flex flex-col gap-2 w-full'>
+				<div className='flex items-center justify-between w-full'>
+					<h6 className='flex-1 truncate font-semibold w-[215px]'>{name}</h6>
 
 					{/* Botão para remover o produto do carrinho */}
 					<button type='button' onClick={() => removeFromCart(id)}>
